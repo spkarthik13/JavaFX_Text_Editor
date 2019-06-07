@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="textEditor.authorController">
+    <children>
+        <Separator layoutX="570.0" layoutY="102.0" orientation="VERTICAL" prefHeight="515.0" prefWidth="12.0" />
+        <MenuBar layoutX="3.0" layoutY="5.0" prefHeight="28.0" prefWidth="787.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#loadFile" text="Load File" />
+                        <MenuItem mnemonicParsing="false" onAction="#loadAnnotateFile" text="Load Annotated File" />
+                        <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#AddComment" text="Annotate" />
+                        <MenuItem mnemonicParsing="false" onAction="#clearAll" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ListView fx:id="commentListView" layoutX="576.0" layoutY="67.0" onMouseClicked="#handleClickListView" prefHeight="555.0" prefWidth="219.0">
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#RemoveComment" text="Delete" />
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </ListView>
+        <TextArea fx:id="textArea" layoutX="3.0" layoutY="67.0" prefHeight="555.0" prefWidth="567.0" />
+        <Label fx:id="fileName" layoutX="14.0" layoutY="33.0" prefHeight="35.0" prefWidth="191.0" text="New File">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font></Label>
+        <Label layoutX="594.0" layoutY="33.0" prefHeight="35.0" prefWidth="164.0" text="Annotation Window" textFill="#2167a9">
+            <font>
+                <Font name="Berlin Sans FB" size="18.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

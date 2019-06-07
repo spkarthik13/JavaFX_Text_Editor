@@ -1,0 +1,35 @@
+
+
+{
+-fx-primary : #22313f;
+-fx-seconday: #FFFF8D;
+-fx-primarytext: #B2B2B9
+
+}
+
+.root{
+    -fx-background-color: -fx-primary;
+}
+
+.glyph-icon
+{
+    fx-fill: -fx-primarytext;
+}
+
+.button{
+    fx-fill: -fx-primarytext;
+}
+
+/*Login Screen Specific*/
+
+.loginAuthorButton{
+    -fx-border-color: -fx-seconday;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.loginAuthorButton:hover{
+    -fx-border-color: -fx-seconday;
+    -fx-background-color: -fx-seconday;
+    -fx-text-fill: -fx-primarytext;
+}

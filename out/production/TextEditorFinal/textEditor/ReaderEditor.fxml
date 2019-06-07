@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="textEditor.readerController">
+    <children>
+        <Separator layoutX="570.0" layoutY="102.0" orientation="VERTICAL" prefHeight="515.0" prefWidth="12.0" />
+        <MenuBar layoutX="3.0" layoutY="5.0" prefHeight="29.0" prefWidth="787.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#loadFile" text="Load" />
+                        <MenuItem mnemonicParsing="false" onAction="#loadReaderFile" text="Load Annotated File" />
+                        <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View" />
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+          <ListView fx:id="readerCommentListView" layoutX="576.0" layoutY="70.0" onMouseClicked="#handleClickListViewReader" prefHeight="552.0" prefWidth="219.0" />
+        <TextArea fx:id="readerTextArea" layoutX="3.0" layoutY="70.0" prefHeight="552.0" prefWidth="567.0" />
+        <Label fx:id="fileName" layoutX="14.0" layoutY="34.0" prefHeight="35.0" prefWidth="191.0" text="Empty">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font></Label>
+        <Label layoutX="604.0" layoutY="34.0" prefHeight="35.0" prefWidth="164.0" text="Annotation Window" textFill="#2167a9">
+            <font>
+                <Font name="Berlin Sans FB" size="18.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
